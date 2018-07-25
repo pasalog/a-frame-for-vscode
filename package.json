@@ -1,15 +1,29 @@
 {
-    "name": "html",
+    "name": "a-frame for vscode",
     "displayName": "A-Frame IntelliSense",
-    "description": "Autocompletion and Refactoring for A-Frame",
+    "description": "Autocompletion for A-Frame",
     "version": "0.0.1",
     "publisher": "pasalog",
+    "author": "Çağatay Uslu <cagatayuslu@msn.com>",
     "engines": {
         "vscode": "^1.25.0"
     },
+    "keywords": [
+        "a-frame",
+        "intellisense",
+        "help"
+    ],
     "categories": [
         "Other"
     ],
+    "icon": "images/logo.jpg",
+    "galleryBanner": {
+        
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pasalog/vscode-a-frame-intellisense.git"
+    },
     "activationEvents": [
         "onCommand:extension.sayHello"
     ],
