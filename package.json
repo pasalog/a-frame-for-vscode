@@ -1,34 +1,29 @@
 {
-    "name": "a-frame for vscode",
-    "displayName": "A-Frame IntelliSense",
+    "name": "a-frame-for-vscode",
+    "displayName": "A-Frame",
     "description": "Autocompletion for A-Frame",
     "version": "0.0.1",
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
+    "icon": "images/logo.jpg",
     "engines": {
         "vscode": "^1.25.0"
     },
-    "keywords": [
-        "a-frame",
-        "intellisense",
-        "help"
-    ],
     "categories": [
-        "Other"
+        "Other",
+        "a-frame"
     ],
-    "icon": "images/logo.jpg",
-    "galleryBanner": {
-        
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pasalog/vscode-a-frame-intellisense.git"
-    },
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "*"
     ],
-    "main": "./extension",
+    "main": "./out/extension",
     "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/a-frame.json"
+            }
+        ],
         "commands": [
             {
                 "command": "extension.sayHello",
@@ -37,13 +32,16 @@
         ]
     },
     "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
         "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "eslint": "^4.11.0",
+        "vscode": "^1.1.16",
+        "tslint": "^5.8.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
     }

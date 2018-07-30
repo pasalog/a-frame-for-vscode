@@ -1,0 +1,8 @@
+{
+	".source.aframe": {
+		"a-scene":{
+			"prefix": "<a-sc",
+			"body": "<a-scene background=\"color: ${1:color}\">\n\t$0\n</a-scene>"
+		}
+    }
+}
