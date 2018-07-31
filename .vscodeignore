@@ -5,3 +5,8 @@ test/**
 jsconfig.json
 vsc-extension-quickstart.md
 .eslintrc.json
+node_modules
+.vscode-test/
+*.vsix
+index.html
+out/

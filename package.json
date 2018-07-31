@@ -6,12 +6,15 @@
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
     "icon": "images/logo.jpg",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pasalog/a-frame-for-vscode.git"
+    },
     "engines": {
         "vscode": "^1.25.0"
     },
     "categories": [
-        "Other",
-        "a-frame"
+        "Other"
     ],
     "activationEvents": [
         "*"
