@@ -3,4 +3,4 @@ node_modules
 *.vsix
 index.html
 out/
-vsc-extension-quickstart.md
+.idea/
