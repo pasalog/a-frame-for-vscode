@@ -2,7 +2,7 @@
     "name": "a-frame-for-vscode",
     "displayName": "A-Frame",
     "description": "Autocompletion for A-Frame",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
     "icon": "images/logo.jpg",

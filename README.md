@@ -6,6 +6,9 @@
 
 Automatically add A-Frame components to completion list and more.
 
+## Usages
+![Usage](images/usage.gif)
+
 ## Change Log
 See Change Log [here](CHANGELOG.md)
 
