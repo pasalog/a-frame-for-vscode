@@ -1,8 +1,8 @@
 {
     "name": "a-frame-for-vscode",
-    "displayName": "A-Frame",
+    "displayName": "A-Frame (Beta)",
     "description": "Autocompletion for A-Frame",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
     "icon": "images/logo.jpg",
@@ -47,5 +47,8 @@
         "tslint": "^5.8.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "openurl": "^1.1.1"
     }
 }

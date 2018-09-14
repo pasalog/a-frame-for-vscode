@@ -1,5 +1,6 @@
 'use-strict';
 import * as vscode from 'vscode';
+var openurl = require('openurl');
 
 const completionTriggerChars = ['<'];
 
@@ -16,11 +17,22 @@ export function activate(context: vscode.ExtensionContext) {
 
     // a-scene snippet
     // createSnippetItem();
-
+    console.log("Deactivated.");
+    // deactivate();
 }
 
 // this metod is called when your extension is deactivated
 export function deactivate() {
+    vscode.window.showInformationMessage("It seems that you have disabled the plugin." +
+        "This plugin is currently in beta.Feel free to open an issue or contribute.", ...['Open an issue', 'Contribute'])
+        .then(selection => {
+            if(selection === 'Contribute') {
+                openurl.open("https://github.com/pasalog/a-frame-for-vscode");
+            }
+            if(selection === 'Open an issue') {
+                openurl.open("https://github.com/pasalog/a-frame-for-vscode/issues");
+            }
+        });
 }
 
 export function getCompletionItems(): vscode.CompletionItem[] {
