@@ -3,8 +3,8 @@ import * as vscode from 'vscode';
 var openurl = require('openurl');
 
 const completionTriggerChars = ['<', 'A'];
-const registerComponentChars = ['A'];
-var registerComponentStructure = "AFRAME.registerComponent('foo', {\n\tschema: {},\n\tinit: function () {},\n\tupdate: function () {},\n\ttick: function () {},\n\tremove: function () {},\n\tpause: function () {},\n\tplay: function () {}\n});";
+// const registerComponentChars = ['A'];
+// var registerComponentStructure = "AFRAME.registerComponent('foo', {\n\tschema: {},\n\tinit: function () {},\n\tupdate: function () {},\n\ttick: function () {},\n\tremove: function () {},\n\tpause: function () {},\n\tplay: function () {}\n});";
 
 export function activate(context: vscode.ExtensionContext) {
     console.log("Activated");

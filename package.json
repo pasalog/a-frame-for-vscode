@@ -1,10 +1,11 @@
 {
     "name": "a-frame-for-vscode",
-    "displayName": "A-Frame (Beta)",
+    "displayName": "A-Frame",
     "description": "Autocompletion for A-Frame",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
+    "license": "MIT",
     "icon": "images/logo.jpg",
     "repository": {
         "type": "git",

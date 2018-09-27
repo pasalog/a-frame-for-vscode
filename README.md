@@ -6,6 +6,10 @@
 
 Automatically add A-Frame components to completion list and more.
 
+## Features
+1. Add A-Frame components (a-box, a-sphere ...) to completion list
+2. Add AFRAME.registerComponent to snippets
+
 ## Usages
 ![Usage](images/usage.gif)
 
