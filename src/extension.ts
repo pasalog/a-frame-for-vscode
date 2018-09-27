@@ -2,11 +2,13 @@
 import * as vscode from 'vscode';
 var openurl = require('openurl');
 
-const completionTriggerChars = ['<'];
+const completionTriggerChars = ['<', 'A'];
+const registerComponentChars = ['A'];
+var registerComponentStructure = "AFRAME.registerComponent('foo', {\n\tschema: {},\n\tinit: function () {},\n\tupdate: function () {},\n\ttick: function () {},\n\tremove: function () {},\n\tpause: function () {},\n\tplay: function () {}\n});";
 
 export function activate(context: vscode.ExtensionContext) {
     console.log("Activated");
-    
+
     vscode.languages.registerCompletionItemProvider('html', {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
             return (
@@ -15,10 +17,8 @@ export function activate(context: vscode.ExtensionContext) {
         }
     }, ...completionTriggerChars);
 
-    // a-scene snippet
-    // createSnippetItem();
     console.log("Deactivated.");
-    // deactivate();
+    deactivate();
 }
 
 // this metod is called when your extension is deactivated
@@ -51,7 +51,14 @@ export function getCompletionItems(): vscode.CompletionItem[] {
 }
 
 export function createSnippetItem(): vscode.CompletionItem {
-    let item = new vscode.CompletionItem('a-scene', vscode.CompletionItemKind.Snippet);
+    var item = new vscode.CompletionItem('a-scene', vscode.CompletionItemKind.Snippet);
     item.insertText = new vscode.SnippetString()
     return item;
+}
+
+export function createRegisterComponentSnippet(): vscode.CompletionItem[] {
+    var completionList: vscode.CompletionItem[] = [];
+    var item = new vscode.CompletionItem('AFRAME', vscode.CompletionItemKind.Snippet);
+    completionList.push(item);
+    return completionList;
 }

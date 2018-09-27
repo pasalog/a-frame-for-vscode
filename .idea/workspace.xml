@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30e1e96e-6c85-4fd9-bc20-357e26c7a0ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extension.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/extension.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -58,8 +54,8 @@
       <file leaf-file-name="extension.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/extension.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -93,9 +89,18 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/configuration-editing/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/css-language-features/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/css-language-features/server/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/debug-auto-launch/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/emmet/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/extension-editing/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/git/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/grunt/node_modules" />
+    <handled-path value="$PROJECT_DIR$/.vscode-test/stable/resources/app/extensions/gulp/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="88" />
     <option name="y" value="44" />
     <option name="width" value="1223" />
@@ -169,16 +174,15 @@
       <workItem from="1533056941500" duration="841000" />
       <workItem from="1533058057554" duration="47000" />
       <workItem from="1533058355449" duration="3297000" />
-      <workItem from="1536880522583" duration="2043000" />
+      <workItem from="1536880522583" duration="2467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6228000" />
+    <option name="totallyTimeSpent" value="6652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="44" width="1223" height="674" extended-state="1" />
-    <editor active="true" />
+    <frame x="88" y="44" width="1223" height="674" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24219409" />
@@ -189,7 +193,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18470149" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.40485075" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -264,7 +268,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -298,8 +302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/extension.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>

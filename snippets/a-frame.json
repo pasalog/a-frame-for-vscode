@@ -1,0 +1,15 @@
+{
+	".source.aframe": {
+		"AFRAME.registerComponent":{
+			"prefix": "AFRAME.registerComponent",
+			"scope": "javascript,typescript",
+			"body": "AFRAME.registerComponent('$0', {\n\tschema: {}\n});",
+			"description": "AFRAME Component Register"
+		},
+		"a-scene":{
+			"prefix": "a-scene",
+			"scope": "html",
+			"body": "<a-scene background=\"color: ${1:color}\">\n\t$0\n</a-scene>"
+		}
+	}
+}
