@@ -9,7 +9,7 @@
 		"a-scene":{
 			"prefix": "a-scene",
 			"scope": "html",
-			"body": "<a-scene background=\"color: ${1:color}\">\n\t$0\n</a-scene>"
+			"body": "a-scene background=\"color: ${1:color}\">\n\t$0\n</a-scene>"
 		}
 	}
 }

@@ -1,64 +1,96 @@
 'use-strict';
 import * as vscode from 'vscode';
-var openurl = require('openurl');
 
-const completionTriggerChars = ['<', 'A'];
-// const registerComponentChars = ['A'];
-// var registerComponentStructure = "AFRAME.registerComponent('foo', {\n\tschema: {},\n\tinit: function () {},\n\tupdate: function () {},\n\ttick: function () {},\n\tremove: function () {},\n\tpause: function () {},\n\tplay: function () {}\n});";
+var openurl = require('openurl');
+import primitives from './data/components.json';
+
+const completionTriggerChars = ["a", "a-"];
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log("Activated");
 
-    vscode.languages.registerCompletionItemProvider('html', {
+    vscode.window.showInformationMessage("I see you like this extension. This is the new (1.2.*) version 😇 I will continue developing this extension. 💻 Please star the repo on GitHub or maybe you'd like to buy me a beer! 🥰", ...['Star ⭐', 'Cheers! 🍺'])
+    .then(selection => {
+        if (selection === 'Star ⭐') {
+            openurl.open("https://github.com/pasalog/a-frame-for-vscode");
+        }if (selection === 'Cheers! 🍺') {
+            openurl.open("https://www.patreon.com/pasalog");
+        }
+    });
+
+    let primitiveProvider = vscode.languages.registerCompletionItemProvider('html', {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
             return (
-                new vscode.CompletionList(getCompletionItems())
+                new vscode.CompletionList(getCompletionItems(document, position))
             );
         }
     }, ...completionTriggerChars);
 
-    console.log("Deactivated.");
-    deactivate();
+    const attrProvider = vscode.languages.registerCompletionItemProvider('html', {
+        provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
+            return (
+                new vscode.CompletionList(getAttributes(document, position))
+            );
+        }
+    }, ' ');
+
+    context.subscriptions.push(primitiveProvider, attrProvider);
 }
 
-// this metod is called when your extension is deactivated
 export function deactivate() {
     vscode.window.showInformationMessage("It seems that you have disabled the plugin." +
-        "This plugin is currently in beta.Feel free to open an issue or contribute.", ...['Open an issue', 'Contribute'])
+        "Feel free to open an issue or contribute.", ...['Open an issue', 'Contribute'])
         .then(selection => {
-            if(selection === 'Contribute') {
+            if (selection === 'Contribute') {
                 openurl.open("https://github.com/pasalog/a-frame-for-vscode");
             }
-            if(selection === 'Open an issue') {
+            if (selection === 'Open an issue') {
                 openurl.open("https://github.com/pasalog/a-frame-for-vscode/issues");
             }
         });
 }
 
-export function getCompletionItems(): vscode.CompletionItem[] {
+export function getCompletionItems(doc: vscode.TextDocument, pos: vscode.Position): vscode.CompletionItem[] {
     let completionList: vscode.CompletionItem[] = [];
-    let primitives = ['a-box', 'a-camera', 'a-circle', 'a-collada-model', 'a-cone',
-     'a-cursor', 'a-curvedimage', 'a-cylinder', 'a-dodecahedron', 'a-gltf-model', 'a-icosahedron',
-     'a-image', 'a-light', 'a-link', 'a-obj-model', 'a-octahedron', 'a-plane', 'a-ring', 'a-sky',
-     'a-sound', 'a-sphere', 'a-tetrahedron', 'a-text', 'a-torus-knot', 'a-torus', 'a-triangle',
-     'a-video', 'a-videosphere'];
-    primitives.forEach(unit => {
-        let completionItem = new vscode.CompletionItem(unit);
+    // @ts-ignore
+    primitives.forEach(i => {
+        let completionItem = new vscode.CompletionItem(i.label);
         completionItem.kind = vscode.CompletionItemKind.Property;
+        completionItem.detail = i.name;
+        completionItem.insertText = new vscode.SnippetString('<' + completionItem.label + '>${1}</' + completionItem.label + '>');
+        // test if an open tag was already written
+        let linePrefix = doc.lineAt(pos).text.substr(0, pos.character);
+        let openTag = linePrefix.lastIndexOf('<');
+        let closeTag = linePrefix.lastIndexOf('>');
+        // delete the open tag if duplicate
+        if (openTag > closeTag) {
+            let range = new vscode.Range(doc.lineAt(pos).lineNumber, openTag, doc.lineAt(pos).lineNumber, openTag + 1);
+            completionItem.additionalTextEdits = [vscode.TextEdit.delete(range)]
+        }
+        completionItem.documentation = new vscode.MarkdownString(i.documentation);
         completionList.push(completionItem);
     });
     return completionList;
 }
 
-export function createSnippetItem(): vscode.CompletionItem {
-    var item = new vscode.CompletionItem('a-scene', vscode.CompletionItemKind.Snippet);
-    item.insertText = new vscode.SnippetString()
-    return item;
-}
+export function getAttributes(doc: vscode.TextDocument, pos: vscode.Position): vscode.CompletionItem[] {
+    
+    
+    let completionItems: vscode.CompletionItem[] = [];
+    let prePos = doc.lineAt(pos).text.substr(0, pos.character);
+    prePos = prePos.substr(prePos.lastIndexOf('<'), pos.character);
 
-export function createRegisterComponentSnippet(): vscode.CompletionItem[] {
-    var completionList: vscode.CompletionItem[] = [];
-    var item = new vscode.CompletionItem('AFRAME', vscode.CompletionItemKind.Snippet);
-    completionList.push(item);
-    return completionList;
+    primitives.forEach((primitive: any) => {
+        let preIndex = prePos.indexOf('<' + primitive.label + '');
+        let closingTagIndex = prePos.indexOf('>');
+        if (preIndex === -1 || closingTagIndex > preIndex)
+            return undefined;
+        primitive.attributes.forEach((attr: any) => {
+            const completionItem = new vscode.CompletionItem(attr.name, vscode.CompletionItemKind.Method)
+            completionItem.insertText = new vscode.SnippetString(attr.name + '="' + '${1:' + attr.default + '}"');
+            completionItem.documentation = new vscode.MarkdownString(attr.description);
+            completionItems.push(completionItem);
+        });
+    });
+
+    return completionItems;
 }

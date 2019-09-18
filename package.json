@@ -2,7 +2,7 @@
     "name": "a-frame-for-vscode",
     "displayName": "A-Frame",
     "description": "Autocompletion for A-Frame",
-    "version": "1.0.0",
+    "version": "1.2.4",
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
     "license": "MIT",
@@ -12,7 +12,7 @@
         "url": "https://github.com/pasalog/a-frame-for-vscode.git"
     },
     "engines": {
-        "vscode": "^1.25.0"
+        "vscode": "^1.38.0"
     },
     "categories": [
         "Other"
@@ -20,34 +20,24 @@
     "activationEvents": [
         "*"
     ],
-    "main": "./out/extension",
-    "contributes": {
-        "snippets": [
-            {
-                "language": "html",
-                "path": "./snippets/a-frame.json"
-            }
-        ],
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ]
-    },
+    "main": "./out/extension.js",
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.16",
-        "tslint": "^5.8.0",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.6",
+        "@types/node": "^10.12.21",
+        "@types/vscode": "^1.38.0",
+        "glob": "^7.1.4",
+        "mocha": "^6.1.4",
+        "typescript": "^3.3.1",
+        "tslint": "^5.12.1",
+        "vscode-test": "^1.2.0"
     },
     "dependencies": {
         "openurl": "^1.1.1"
