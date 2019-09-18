@@ -5,11 +5,11 @@
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
 [![Rating](https://vsmarketplacebadge.apphb.com/rating/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
 
-Automatically add A-Frame components to completion list and more.
+Adds A-Frame primitives to completion list and more.
 
 ## Features
-1. Add A-Frame components (a-box, a-sphere ...) to completion list
-2. Add AFRAME.registerComponent to snippets
+1. Adds A-Frame primitives (a-box, a-sphere ...) to vscode completion list
+2. Adds primitive and its attrbitues docs description
 
 ## Usages
 ![Usage](images/usage.gif)
