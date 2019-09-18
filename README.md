@@ -11,7 +11,7 @@ Adds A-Frame primitives to completion list and more.
 1. Adds A-Frame primitives (a-box, a-sphere ...) to vscode completion list
 2. Adds primitive and its attrbitues docs description
 
-## Usages
+## Usage
 ![Usage](images/usage.gif)
 
 ## Change Log
