@@ -2,7 +2,7 @@
     "name": "a-frame-for-vscode",
     "displayName": "A-Frame",
     "description": "Autocompletion for A-Frame",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "publisher": "pasalog",
     "author": "Çağatay Uslu <cagatayuslu@msn.com>",
     "license": "MIT",
@@ -38,8 +38,5 @@
         "typescript": "^3.3.1",
         "tslint": "^5.12.1",
         "vscode-test": "^1.2.0"
-    },
-    "dependencies": {
-        "openurl": "^1.1.1"
     }
 }

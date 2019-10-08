@@ -1,21 +1,11 @@
 'use-strict';
 import * as vscode from 'vscode';
 
-var openurl = require('openurl');
 import primitives from './data/components.json';
 
 const completionTriggerChars = ["a", "a-"];
 
 export function activate(context: vscode.ExtensionContext) {
-
-    vscode.window.showInformationMessage("I see you like this extension. This is the new (1.2.*) version 😇 I will continue developing this extension. 💻 Please star the repo on GitHub or maybe you'd like to buy me a beer! 🥰", ...['Star ⭐', 'Cheers! 🍺'])
-    .then(selection => {
-        if (selection === 'Star ⭐') {
-            openurl.open("https://github.com/pasalog/a-frame-for-vscode");
-        }if (selection === 'Cheers! 🍺') {
-            openurl.open("https://www.patreon.com/pasalog");
-        }
-    });
 
     let primitiveProvider = vscode.languages.registerCompletionItemProvider('html', {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
@@ -34,19 +24,6 @@ export function activate(context: vscode.ExtensionContext) {
     }, ' ');
 
     context.subscriptions.push(primitiveProvider, attrProvider);
-}
-
-export function deactivate() {
-    vscode.window.showInformationMessage("It seems that you have disabled the plugin." +
-        "Feel free to open an issue or contribute.", ...['Open an issue', 'Contribute'])
-        .then(selection => {
-            if (selection === 'Contribute') {
-                openurl.open("https://github.com/pasalog/a-frame-for-vscode");
-            }
-            if (selection === 'Open an issue') {
-                openurl.open("https://github.com/pasalog/a-frame-for-vscode/issues");
-            }
-        });
 }
 
 export function getCompletionItems(doc: vscode.TextDocument, pos: vscode.Position): vscode.CompletionItem[] {
