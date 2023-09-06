@@ -1,8 +1,8 @@
 # A-Frame for VSCode
 
-[![Marketplace Version](https://vsmarketplacebadge.apphb.com/version/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
-[![Rating](https://vsmarketplacebadge.apphb.com/rating/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
+[![Marketplace Version](https://vsmarketplacebadges.dev/version/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
+[![Installs](https://vsmarketplacebadges.dev/installs/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
+[![Rating](https://vsmarketplacebadges.dev/rating/pasalog.a-frame-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=pasalog.a-frame-for-vscode)
 
 Adds A-Frame primitives to completion list and more.
 
