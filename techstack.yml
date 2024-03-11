@@ -1,0 +1,190 @@
+repo_name: pasalog/a-frame-for-vscode
+report_id: 19a1d4aa5783732cc1cebb05cb68a276
+version: 0.1
+repo_type: Public
+timestamp: '2024-03-11T21:55:09+00:00'
+requested_by: pasalog
+provider: github
+branch: master
+detected_tools_count: 14
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: unknown
+  last_updated_on: 2019-09-18 01:49:08.000000000 Z
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode
+  detection_source: Repo Metadata
+- name: ".NET"
+  description: A free, cross-platform, open source developer platform for building
+    many different types of applications
+  website_url: http://www.microsoft.com/net/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Çağatay Uslu
+  last_updated_on: 2018-07-25 11:07:46.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Çağatay Uslu
+  last_updated_on: 2018-07-31 11:00:03.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode
+  detection_source: Repo Metadata
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 6.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: unknown
+  last_updated_on: 2019-09-18 01:49:08.000000000 Z
+- name: NuGet
+  description: The package manager for .NET
+  website_url: https://www.nuget.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Çağatay Uslu
+  last_updated_on: 2018-07-25 11:07:46.000000000 Z
+- name: TSLint
+  description: An extensible linter for the TypeScript language
+  website_url: https://github.com/palantir/tslint
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/5561/303157.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Çağatay Uslu
+  last_updated_on: 2018-07-25 11:07:46.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/yarn.lock
+  detection_source: yarn.lock
+  last_updated_by: pasalog
+  last_updated_on: 2019-10-08 20:48:23.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Çağatay Uslu
+  last_updated_on: 2018-07-25 11:07:46.000000000 Z
+- name: "@types/glob"
+  description: TypeScript definitions for Glob
+  package_url: https://www.npmjs.com/@types/glob
+  version: 7.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16391/default_fc6e1fc17e404d936593b5b901d67abb3386daa3.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: unknown
+  last_updated_on: 2019-09-18 01:49:08.000000000 Z
+- name: "@types/mocha"
+  description: TypeScript definitions for mocha
+  package_url: https://www.npmjs.com/@types/mocha
+  version: 5.2.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15893/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: unknown
+  last_updated_on: 2019-09-18 01:49:08.000000000 Z
+- name: "@types/node"
+  description: TypeScript definitions for Node.js
+  package_url: https://www.npmjs.com/@types/node
+  version: 12.7.12
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: unknown
+  last_updated_on: 2019-09-18 01:49:08.000000000 Z
+- name: glob
+  description: A little globber
+  package_url: https://www.npmjs.com/glob
+  version: 7.1.3
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15875/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: https://github.com/pasalog/a-frame-for-vscode/blob/master/yarn.lock
+  detection_source: package.json
+  last_updated_by: unknown
+  last_updated_on: 2019-09-18 01:49:08.000000000 Z
